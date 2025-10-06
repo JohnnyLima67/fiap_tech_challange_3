@@ -1,0 +1,312 @@
+/* 🔧 Reset e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+}
+
+/* 🧭 Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+header nav a {
+  margin-left: 15px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #e0e0e0;
+}
+
+/* 📝 Listagem de posts estilo blog */
+.post {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+}
+
+.post img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.post .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post .content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.post .content p.summary {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.post .content .info {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.post .content .info span.author {
+  font-weight: bold;
+  color: #444;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.post .content a.read-more {
+  align-self: flex-start;
+  font-weight: bold;
+  color: #0077cc;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.post .content a.read-more:hover {
+  text-decoration: underline;
+}
+
+/* 📄 Página de post completo */
+.post-full {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.post-full img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.post-full header {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.post-full h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.post-full p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 🔐 Formulários de login e registro */
+form.login,
+form.register {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+form.login h2,
+form.register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+form.login input,
+form.register input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+}
+
+form.login button,
+form.register button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form.login button:hover,
+form.register button:hover {
+  background-color: #005fa3;
+}
+
+/* 🆕 Formulário de criação de post */
+form.create-post {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+form.create-post h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+form.create-post input[type="title"],
+form.create-post input[type="summary"],
+form.create-post textarea,
+form.create-post input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+}
+
+form.create-post textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+form.create-post button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form.create-post button:hover {
+  background-color: #218838;
+}
+
+/* Botão de editar post */
+.post-full .edit-button {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #b6b2a6;
+  color: #212529;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;;
+}
+
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .post .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .post-full {
+    padding: 15px;
+  }
+
+  .post-full h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-full p {
+    font-size: 1rem;
+  }
+
+  form.create-post,
+  form.login,
+  form.register {
+    padding: 20px;
+  }
+}
