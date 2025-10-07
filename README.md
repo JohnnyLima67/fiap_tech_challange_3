@@ -50,6 +50,10 @@ Integração: O client faz chamadas para os endpoints da API, exibindo os dados 
 ### 📦 Requisitos
 Node.js (versão recomendada: 18+)
 
-npm (ou yarn)
+npm
 
 Navegador moderno para acessar o client
+
+### Como testar
+
+Para testar um usuário com acesso, utilizar o login: Admin e senha: admin
